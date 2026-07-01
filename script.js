@@ -7,6 +7,12 @@ searchBtn.addEventListener("click", () => {
     getWeather(city)
 })
 
+cityInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        searchBtn.click()
+    }
+})
+
 
 async function getWeather(city) {
 
@@ -16,8 +22,8 @@ async function getWeather(city) {
         weather.innerHTML = "<p>Loading...</p>"
         const response = await fetch(url)
         const data = await response.json()
-        if(data.cod=="404"){
-            weather.innerHTML="<h2>City Not Found</h2>"
+        if (data.cod == "404") {
+            weather.innerHTML = "<h2>City Not Found</h2>"
             return;
         }
         weather.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">

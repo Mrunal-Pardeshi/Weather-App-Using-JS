@@ -6,7 +6,6 @@ A modern and responsive weather application built using **HTML, CSS, and JavaScr
 
 🔗 **https://mrunal-pardeshi.github.io/Weather-App-Using-JS/**
 
-> Replace the link above with your actual GitHub Pages URL if it's different.
 
 ## ✨ Features
 
